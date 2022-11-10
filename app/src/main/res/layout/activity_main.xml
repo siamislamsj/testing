@@ -1,34 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg"
     tools:context=".MainActivity">
+
     <LinearLayout
-        android:layout_width="match_parent"
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="9dp"
+        android:background="@drawable/bg"
+        android:gravity="center"
         android:orientation="vertical"
-        android:layout_height="match_parent"
-        android:layout_margin="10dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="273dp"
+            android:layout_height="152dp"
+            android:background="#007B1FA2"
+            android:backgroundTint="#FFFFFF"
+            android:src="@drawable/logos" />
+
         <EditText
             android:id="@+id/username_et"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="UserName"/>
+            android:layout_marginBottom="1dp"
+            android:gravity="center"
+            android:hint="UserName"
+            android:minHeight="48dp"
+            android:textColor="@color/white"
+            android:textColorHint="#FFFFFF" />
+
         <EditText
             android:id="@+id/password_et"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:Color="@color/white"
+            android:gravity="center"
             android:hint="Password"
-            android:inputType="textPassword"/>
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:textColorHint="#FFFFFF" />
+
         <Button
             android:id="@+id/loing_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#A38484"
+            android:backgroundTint="#671D1D"
+            android:gravity="center"
             android:text="LogIn"
-            android:textAllCaps="false"
-            android:gravity="center"/>
+            android:textAllCaps="false" />
+
+
     </LinearLayout>
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 
