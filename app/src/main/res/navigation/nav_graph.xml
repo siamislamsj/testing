@@ -14,7 +14,11 @@
         android:id="@+id/homeFragment"
         android:name="com.example.login.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_blankFragment"
+            app:destination="@id/blankFragment" />
+    </fragment>
     <fragment
         android:id="@+id/blankFragment"
         android:name="com.example.login.BlankFragment"
